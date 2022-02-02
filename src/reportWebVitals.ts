@@ -1,3 +1,4 @@
+/* eslint-disable promise/always-return, promise/catch-or-return, @typescript-eslint/no-floating-promises */
 import { ReportHandler } from 'web-vitals';
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {

@@ -1,0 +1,61 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "pjchender",
+    "plugin:storybook/recommended"
+  ],
+  "parserOptions": {
+    "project": "tsconfig.eslint.json"
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.stories.*"
+      ],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    }
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "examples/**",
+          "examples-native/**",
+          "**/example/**",
+          "*.js",
+          "**/*.test.js",
+          "**/*.stories.*",
+          "**/scripts/*.js",
+          "**/stories/**/*.js",
+          "**/__tests__/**/*.js",
+          "**/.storybook/**/*.*"
+        ],
+        "peerDependencies": true
+      }
+    ],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": [
+          "@storybook"
+        ]
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "{}": false
+        },
+        "extendDefaults": true
+      }
+    ]
+  }
+}
